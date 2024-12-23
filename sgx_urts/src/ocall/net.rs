@@ -79,7 +79,8 @@ pub unsafe extern "C" fn u_getaddrinfo_ocall(
         cur_ptr = cur.ai_next;
     }
 
-    *out_count = i;
+    //*out_count = i;
+    std::ptr::write_unaligned(out_count,i);
     libc::freeaddrinfo(res);
     0
 }
