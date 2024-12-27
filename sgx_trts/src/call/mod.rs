@@ -26,4 +26,5 @@ pub(crate) use msbuf::MsbufInfo;
 
 pub use ecall::{ecall, ECallIndex, FIRST_ECALL};
 pub use ocall::{ocall, oret, OCallIndex};
+#[allow(unused_imports)]
 pub use ocalloc::{OcAlloc, OcBuffer};
